@@ -1,0 +1,97 @@
+<section class="login-block">
+  <!-- Container-fluid starts -->
+  <div class="container-fluid">
+    <div class="row mycls"></div>
+    <div class="row ">
+      <div class="col-sm-12">
+        <!-- Authentication card start -->
+        <form [formGroup]="angForm" #myform="ngForm" novalidate class="md-float-material form-material m-t-40 m-b-40"
+          action="javascript:">
+          <div class="auth-box card">
+            <div class="card-block">
+              <div class="row m-b-20">
+                <div class="col-md-12 text-center" style="margin-top: -20px;">
+                  <img src="assets/images/logo.jpg" style="color: white;vertical-align: middle;" height="80" width="80"
+                    alt="small-logo.png">
+                  <label style="text-align: center;font-weight: 600;">{{bankname}}</label>
+                  <!-- <i class="bi bi-person-fill"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-person-fill iconcls" viewBox="-1 -1 18 18">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                  </svg> -->
+                </div>
+              </div>
+              <div class="form-group form-primary">
+                <input type="text" name="userName" class="form-control" formControlName="userName" required>
+                <span class="form-bar"></span>
+                <label class="float-label"><i class="bi bi-person-fill form-primary"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-person-fill" viewBox="0 0 20 20">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                  </svg>
+                  Enter User Name
+                </label>
+              </div>
+              <div class="form-group form-primary">
+
+                <input [type]="passType" name="password" class="form-control" formControlName="password" required>
+                <span class="form-bar"></span>
+                <div style="    display: block; margin-left: 95%;margin-top: -15%;">
+                  <span toggle="#password-field" style=" margin: 12px 0px 0px -19px"
+                    class="fa fa-fw fa-eye field-icon toggle-password" (click)="showHidePassword()"></span>
+                </div>
+                <label class="float-label"> <i class="bi bi-lock-fill form-primary"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-lock-fill" viewBox="0 0 20 20">
+                    <path
+                      d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                  </svg>
+                  Password
+                </label>
+              </div>
+              <div class="row m-t-25 text-left">
+                <div class="col-12">
+                  <div class="checkbox-fade fade-in-primary d-">
+                    <!-- <label>
+                        <input type="checkbox" value="">
+                        <span class="cr"><i class="cr-icon fa fa-check txt-primary"></i></span>
+                        <span class="text-inverse">Remember me</span>
+                      </label> -->
+                  </div>
+                  <!-- <div class="forgot-phone text-right f-right">
+                    <a [routerLink]="['/auth/forgot']" class="text-right f-w-600"> Forgot Password?</a>
+                  </div> -->
+                </div>
+              </div>
+              <div class="row m-t-30">
+                <div class="col-md-12">
+                  <button type="button"
+                    class="btn btn-primary btn-md btn-block waves-light text-center m-b-20 ripple btncls"
+                    (click)="login()">LOGIN</button>
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-md-10">
+                  <!-- <p class="text-inverse text-left m-b-0">Thank you.</p>
+                    <p class="text-inverse text-left"><a [routerLink]="['/dashboard/default']"><b>Back to website</b></a></p> -->
+                </div>
+                <div class="col-md-2 text-right f-right">
+                  <img src="assets/images/comp.png" alt="small-logo.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Authentication card end -->
+      </div>
+      <!-- end of col-sm-12 -->
+    </div>
+    <!-- end of row -->
+  </div>
+  <!-- end of container-fluid -->
+</section>
+<!-- </div> -->
+<div class="transition">
+  <!-- <p class="text-center m-b-0">Copyright &copy; 2017 MEGA ABLE ADMIN , All rights reserved.</p> -->
+</div>

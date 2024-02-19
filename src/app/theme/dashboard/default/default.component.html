@@ -1,0 +1,116 @@
+
+<div class="card mycard" style="margin-top: 56px;">
+  <div class="card-block">
+    <div class="row">
+      <div class="col">
+        <h4>My Portfolio</h4>
+      </div>
+      <div class="col text-right">
+        <img src="assets/images/comp.png" alt="small-logo.png">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/saving.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('SB')"> <i class="fa fa-inr" aria-hidden="true"></i> {{sbamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('SB')">Savings ({{sbcount}} A/C)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/OD_Account.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('CA')"> <i class="fa fa-inr" aria-hidden="true"></i> {{caamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('CA')"> Current ({{cacount}} A/C)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/fixed-deposit.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('TD')"> <i class="fa fa-inr" aria-hidden="true"></i> {{tdamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('TD')"> Deposits ({{tdcount}} A/C)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/loan.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('LN')"> <i class="fa fa-inr" aria-hidden="true"></i> {{lnamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('LN')"> Loans ({{lncount}} A/C)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/cashCredit.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('CC')"> <i class="fa fa-inr" aria-hidden="true"></i> {{ccamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('CC')"> Cash Credit ({{cccount}} A/C)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/market-share.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('SH')"> <i class="fa fa-inr" aria-hidden="true"></i> {{shamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('SH')"> Shares ({{shcount}} A/C)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/pigmy.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('PG')"> <i class="fa fa-inr" aria-hidden="true"></i> {{pgamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('PG')"> Pigmy ({{pgcount}} A/C)</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 b-r-default m-t-15 text-right">
+        <img src="assets/images/bank.png" style="color: white;vertical-align: middle;" height="40" width="40"
+          alt="small-logo.png">
+        <!-- <i class='fa fa-institution d-flex justify-content-end'></i> -->
+      </div>
+      <div class="col-8">
+        <h5 class="myh5" (click)="routePage('GS')"> <i class="fa fa-inr" aria-hidden="true"></i> {{gsamount}}</h5>
+        <p class="text-muted m-b-0" (click)="routePage('GS')"> Anamat ({{gscount}} A/C)</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <div class="form-group">
+        <label style="margin: 10px;color: white;">Off</label>
+        <div class="switch switch-primary d-inline m-r-10">
+          <input type="checkbox" id="switch-p-1" (click)="check()">
+          <label for="switch-p-1" class="cr"></label>
+        </div>
+        <label style="margin: 10px; color: white;">On</label>
+        <div style="padding-left: 190px; color: white;">{{date1}}</div>
+      </div>
+    </div>
+  </div>
+</div>

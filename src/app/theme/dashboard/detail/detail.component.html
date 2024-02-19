@@ -1,0 +1,433 @@
+<div class="loader-block loader" *ngIf="isloader">
+    <svg id="loader2" viewBox="0 0 100 100">
+        <circle id="circle-loader2" cx="50" cy="50" r="45"></circle>
+    </svg>
+</div>
+
+<div class="card">
+    <div>
+        <div [routerLink]="['/dashboard/list', custid, schemetype,actype]">
+            <label><img src="assets/images/left-arrow.png" height="13" width="13" alt="small-logo.png">
+                <span class="spanCls">CUSTOMER DETAILS</span></label>
+        </div>
+        <div class="d-flex justify-content-end">
+            <img src="assets/images/comp.png" height="30" width="60" alt="small-logo.png">
+            <div [routerLink]="['/dashboard/default']">
+                <img src="assets/images/home.png" height="18" width="18" alt="small-logo.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showData">
+    <div *ngFor="let data of detailarray">
+        <div class="card mycard">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col">
+                        <label class="lablecolor">A/C No</label>
+                    </div>
+                    <div class="col">
+                        <label class="lablecolor">{{data.BANKACNO}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label class="lablecolor">Product Name</label>
+                    </div>
+                    <div class="col-6" style="padding-right: 0px;">
+                        <label class="lablecolor">{{data.SCHEMENAME}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="padding-right: 0px;">
+                        <label class="lablecolor">Outstanding Amount</label>
+                    </div>
+                    <div class="col-6">
+                        <i class="fa fa-inr" aria-hidden="true" style="font-size: 16px; color: white;">
+                            {{data.BALANCE}}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card cardcls" *ngIf="LNCC">
+            <div class="card-block" style="padding-left: 0;">
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Branch Name</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">A/c Type</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Kolhapur</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_ACNOTYPE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Sanction Amount</label>
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Disbursed Amount</label>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 2px;">
+                    <div class="col">
+                        <i style="color: #455a64;" class="fa fa-inr" aria-hidden="true"> {{data.AC_SANCTION_AMOUNT}}</i>
+                    </div>
+                    <div class="col">
+                        <i style="color: #455a64;" class="fa fa-inr" aria-hidden="true"> {{data.AC_DRAWPOWER_AMT}}</i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="font-weight: bold;">
+                        <label>Date of Loan</label>
+                    </div>
+                    <div class="col" style="font-weight: bold;">
+                        <label>Maturity Date</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>{{data.AC_SANCTION_DATE}}</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_EXPIRE_DATE}}</label>
+                    </div>
+                </div>
+                <div class="row" *ngIf="isShow">
+
+                    <div class="col-6" style="font-weight: bold; padding-right: 0px ;">
+                        <label>Next Installment on</label>
+                    </div>
+                    <div class="col-6" style="font-weight: bold;">
+                        <label>Rate of Interest</label>
+                    </div>
+                </div>
+                <div class="row" *ngIf="isShow">
+
+                    <div class="col">
+                        <label>{{data.NEXTINSTALLMENTDATE}}</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_INTRATE}}</label>
+                    </div>
+                </div>
+                <div class="row" *ngIf="isShow">
+                    <div class="col-7" style="font-weight: bold; padding-right: 0px ;">
+                        <label>Next Installment Amount</label>
+                    </div>
+                    <div class="col" style="font-weight: bold;padding-top: 3px;">
+                        <label>Tenure</label>
+                    </div>
+                </div>
+                <div class="row" *ngIf="isShow">
+                    <div class="col">
+                        <i style="color: #455a64;" class="fa fa-inr" aria-hidden="true">
+                            {{data.NEXTINSTALLMENTAMOUNT}}</i>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_MONTHS}} Months</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center" style="color: blue;">
+                        <u><a (click)="viewMore()" *ngIf="ishide">View More Information
+                                <i class="fa fa-angle-down" style="font-size:20px; padding-left: 4px;"></i></a></u>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card cardcls" *ngIf="SBCAGS">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Branch Name</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">A/c Type</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Kolhapur</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_ACNOTYPE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Product Name</label>
+                    </div>
+                    <div class="col-6" style="padding-right: 0px;">
+                        <label style="font-weight: bold;">A/c Opening Date</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="padding-right: 0px;">
+                        <label>{{data.SCHEMENAME}}</label>
+                    </div>
+                    <div class="col-6">
+                        <label>{{data.AC_OPDATE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="font-weight: bold;padding-right: 0px;">
+                        <label>Outstanding Amount</label>
+                    </div>
+                    <div class="col-6" *ngIf="schemetype == 'SB' || schemetype == 'CA'">
+                        <label style="font-weight: bold;">Rate of Interest</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <i style="font-size: 16px; color: #455a64;" class="fa fa-inr" aria-hidden="true">
+                            {{data.BALANCE}}</i>
+                    </div>
+                    <div class="col">
+                        <i *ngIf="schemetype == 'SB'" style="font-size: 16px; color: #455a64;" class="fa fa-inr"
+                            aria-hidden="true">
+                            {{data.SBAC_INTRATE == null ? '0.00' :
+                            data.SBAC_INTRATE}}</i>
+
+                        <i *ngIf="schemetype == 'CA'" style="font-size: 16px; color: #455a64;" class="fa fa-inr"
+                            aria-hidden="true">
+                            {{data.AC_INTRATE == null ? '0.00' :
+                            data.AC_INTRATE}}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card cardcls" *ngIf="TD">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Branch Name</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">A/c Type</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Kolhapur</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_ACNOTYPE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Product Name</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">Opening Date</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>{{data.SCHEMENAME}}</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_OPDATE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Maturity Date</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">Rate of Interest</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>{{data.AC_EXPDT}}</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_INTRATE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Deposit Amount</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">Maturity Amount</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <i style="color: #455a64;" class="fa fa-inr" aria-hidden="true"> {{data.AC_SCHMAMT}}</i>
+                    </div>
+                    <div class="col">
+                        <i style="color: #455a64;" class="fa fa-inr" aria-hidden="true"> {{data.AC_MATUAMT}}</i>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 3px;">
+                    <div class="col">
+                        <label style="font-weight: bold;">Tenure</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>{{data.AC_MONTHS}} Months</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card cardcls" *ngIf="PG">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Branch Name</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">A/c Type</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Kolhapur</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_ACNOTYPE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Product Name</label>
+                    </div>
+                    <div class="col-6">
+                        <label style="font-weight: bold;padding-right: 0px">A/c Opening Date</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>{{data.SCHEMENAME}}</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_OPDATE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Agent Scheme</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">Agent Code</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>{{data.AGENT_SCHEME}}</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AGENT_CODE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Interest Rate</label>
+                    </div>
+                    <div class="col-6" style="padding-right: 0px">
+                        <label style="font-weight: bold;">Outstanding Amount</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>{{data.AC_INTRATE}}</label>
+                    </div>
+                    <div class="col">
+                        <i style="color: #455a64;" class="fa fa-inr" aria-hidden="true"> {{data.BALANCE}}</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card cardcls" *ngIf="SH">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col">
+                        <label style="font-weight: bold;">Branch Name</label>
+                    </div>
+                    <div class="col">
+                        <label style="font-weight: bold;">A/c Type</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Kolhapur</label>
+                    </div>
+                    <div class="col">
+                        <label>{{data.AC_ACNOTYPE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label style="font-weight: bold;">Product Name</label>
+                    </div>
+                    <div class="col-6" style="padding-right: 0px;">
+                        <label style="font-weight: bold;">A/c Opening Date</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="padding-right: 0px;">
+                        <label>{{data.SCHEMENAME}}</label>
+                    </div>
+                    <div class="col-6">
+                        <label>{{data.AC_OPDATE}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="font-weight: bold;padding-right: 0px;">
+                        <label>Outstanding Amount</label>
+                    </div>
+                    <!-- <div class="col-6">
+                        <label style="font-weight: bold;">Rate of Interest</label>
+                    </div> -->
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <i style="font-size: 16px; color: #455a64;" class="fa fa-inr" aria-hidden="true">
+                            {{data.BALANCE}}</i>
+                    </div>
+                    <div class="col">
+                        <!-- <i *ngIf="schemetype == 'SB'" style="font-size: 16px; color: #455a64;" class="fa fa-inr"
+                            aria-hidden="true">
+                            {{data.SBAC_INTRATE == null ? '0.00' :
+                            data.SBAC_INTRATE}}</i>
+
+                        <i *ngIf="schemetype == 'CA'" style="font-size: 16px; color: #455a64;" class="fa fa-inr"
+                            aria-hidden="true">
+                            {{data.AC_INTRATE == null ? '0.00' :
+                            data.AC_INTRATE}}</i> -->
+                    </div>
+                    <!-- <div class="col">
+                        <i style="font-size: 16px; color: #455a64;" class="fa fa-inr" aria-hidden="true">
+                            {{data.BALANCE}}</i>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col text-center">
+                    <button type="button" class="btn btn-primary btn-md btn-block waves-light text-center ripple btncls"
+                        (click)="viewStatement()">View
+                        Statement</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

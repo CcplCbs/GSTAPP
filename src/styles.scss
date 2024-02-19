@@ -1,0 +1,301 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.iconcls {
+    background: #02AAB0; 
+    background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0); 
+    background: linear-gradient(to right, #00CDAC, #02AAB0); 
+    
+    color: white;
+    border-radius: 60%;
+}
+
+.btncls {
+    background: #02AAB0; 
+    background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0); 
+    background: linear-gradient(to right, #00CDAC, #02AAB0); 
+    
+    border-radius: 5px;
+    color: white;
+
+}
+
+.form-primary { 
+    padding: 5px;
+}
+
+.mycls {
+    background: #02AAB0;
+    background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0);
+    background: linear-gradient(to right, #00CDAC, #02AAB0);
+
+    height: 150px;
+    border-radius: 0 0 100% 0;
+    /* box-shadow: 10px 10px 0px 0px #f57dd1; */
+    animation: curvedshadow 1s ease infinite;
+    position: relative;
+    // background: -webkit-linear-gradient(to right, #b91d73, #f953c6);+
+    // background: linear-gradient(to right, #b91d73, #f953c6);
+    // height: 60px;
+    // border-radius: 0px 0px 100% 100%;
+    // box-shadow: 10px 10px 0px 0px #f57dd1;
+    // animation: curvedshadow 1s ease infinite;
+    // position: relative;
+}
+
+.transition {
+    background: #02AAB0;
+    background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0);
+    background: linear-gradient(to right, #00CDAC, #02AAB0);
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    height: 50px;
+    right: 0;
+    border-radius: 100% 0% 0px 0px;
+    animation: curvedshadow 1s ease infinite;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+// .col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col,
+.col-auto,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm,
+.col-sm-auto,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md,
+.col-md-auto,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg,
+.col-lg-auto,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl,
+.col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: 24px;
+    padding-left: 25px;
+}
+
+.p-4 {
+    padding: 0.5rem !important;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 0px 0px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+body {
+    background-color: white;
+    // color: white;
+}
+
+p {
+    font-size: 15px;
+}
+
+.myh5 {
+    font-size: 1.25rem;
+    padding-top: 13px;
+}
+
+.mycard {
+    background: #02AAB0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00CDAC, #02AAB0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.text-muted {
+    color: white !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: white
+}
+
+.lablecolor {
+    color: white
+}
+
+.cardcls {
+    box-shadow: 0px 0px 1px 1px;
+}
+
+fieldset {
+    overflow: hidden
+}
+
+.some-class {
+    float: left;
+    clear: none;
+}
+
+label {
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 5px 0px 2px;
+}
+
+input[type=radio],
+input.radio {
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.spanCls {
+    padding-left: 3px;
+    color: #02AAB0;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #dddddd;
+
+}
+
+th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 10px;
+}
+
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 9px;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.no-data-available {
+    text-align: center;
+    color: #51585e;
+}
+
+.loader {
+    text-align: center;
+    margin-top: 20px;
+}
+
+// .custom-col {
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+//   }
+
+//   /* You can adjust the margin or padding as needed */
+//   .custom-col:last-child {
+//     margin-left: auto;
+//   }
+@media only screen and (max-width: 992px) {
+    .pcoded-main-container {
+        margin-top: 5px !important;
+    }
+}
+.viewcls{
+    font-size:13px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
